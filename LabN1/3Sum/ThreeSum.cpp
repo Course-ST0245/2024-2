@@ -10,8 +10,8 @@ using namespace std::chrono;
 
 int main(){
 
-  const int arraySize = 5;
-  const char *filename = "numbers5.txt";
+  const int arraySize = 3000;
+  const char *filename = "numbers3000.txt";
   int numbers[arraySize];
 
   ifstream myFile(filename);
@@ -55,9 +55,9 @@ int main(){
   auto stop = high_resolution_clock::now();
 
   // Calculate execution time
-  auto duration = duration_cast<microseconds>(stop - start) / 1000000;
+  auto duration = duration_cast<seconds>(stop - start);
 
   // Print execution time...
-  cout << "Execution time is: " << duration.count() << " sec"
-       << endl;
+  cout << "Execution time is: " << duration.count() << " sec" << endl;
+
 }
