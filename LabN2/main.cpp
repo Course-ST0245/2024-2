@@ -7,13 +7,20 @@ using namespace std;
 int main(){
 
     ArrayInteger test;
-    ArrayInteger myArray(10);
 
     cout<< "Array has been initialized successfully: \n";
     cout<< "The size of the array 'test' is: " << test.getSize() <<"\n";
-    cout<< "The size of the array 'myArray' is: " << myArray.getSize() <<"\n";
 
-    myArray.print();
+    test.addElement(0);
+    test.addElement(5);
+    test.addElement(3);
+    test.addElement(1);
+    test.addElement(4);
+    test.addElement(2);
+    test.insertElementAt(99,2);
+    test.print();
+    test.insertionSort();
+    test.print();
 
     return 0;
 }
